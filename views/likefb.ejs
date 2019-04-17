@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> OUR FANPAGE </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="./stylesheets/vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="./javascripts/check-like.js"></script>
+ 	
+	<link rel="stylesheet" href="./stylesheets/vendor/bootstrap.css">
+	<link rel="stylesheet" href="./stylesheets/vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body >
+        <script>
+                (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'Messenger'));
+        </script> 
+    <%# phan xử lý cho page fb %>
+    <div class="fb-page" style="width:100%; height:100%;"
+        data-href="https://www.facebook.com/tentech.io" 
+        data-tabs="" 
+        data-small-header="false" 
+        data-adapt-container-width="true" 
+        data-hide-cover="false" 
+        data-show-facepile="true"
+        data-width="420"
+        data-height="700">  
+    </div>
+    <%# ---------------- %>
+
+    <%# phần xư lý nút xác nhân %>
+    <div class="confirm">
+        <div class="container">
+            <form action="/fb" method="get">
+                <input id="send-fb" type="submit" value="CONFIRM" name="<%=id %>">
+            </form>
+            <div class="note">Bấm "Thích Trang" và <br> "Xác nhận" để nhận được Token TEN</div>
+        </div>
+    </div>
+    <%# --------------------- %>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>
+</body >
+</html>

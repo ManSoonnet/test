@@ -1,0 +1,350 @@
+*{margin: 0;padding: 0;}
+
+input#send_result {
+    width: 100px;
+    color: white;
+    background: #9C27B0;
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.result_wallet {
+    color: white;
+    width: 50%;
+    text-align: left;
+}
+
+.detail-total {
+    font-weight: bold;
+}
+
+p.nof {
+    color: gray;
+    font-weight: 400;
+}
+
+.twitter {
+    position: absolute;
+    top: 100px;
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    border: solid 2px #2196F3;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+button#confirm-mail {
+    background: #c70a0a;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+p.notification {
+    text-align: left;
+    width: 100%;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+h6.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.note {
+    color: white;
+    font-weight: bold;
+    background: #8080809e;
+    width: 80%;
+    padding: 5px 10px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+button#check_like {margin-top: 30%;font-weight: bold;background: #673AB7;color: white;border: solid 2px #673AB7;}
+
+button#check_like:hover {
+    background: #9C27B0;
+    color: white;
+    border: solid 2px #9C27B0;
+}
+
+.confirm {
+    position: absolute;
+    top: 23%;
+    width: 100%;
+    text-align: center;
+    background: #80808069;
+    opacity: 0;
+    transition: 0.4s;
+    height: 300px;
+    animation: noteAppear 5s forwards;
+    animation-delay: 5s;
+}
+@-webkit-keyframes noteAppear{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+.confirm.disappear {
+  display: none;
+}
+
+h4#timerArea {
+    border: solid 1px #3F51B5;
+    padding: 5px;
+    border-radius: 10px;
+    background: #3F51B5;
+    color: white;
+    font-size: 16px;
+}
+
+.detail-total {
+    color: #00ff0a;
+    margin-bottom: 10px;
+}
+
+input.pick-anwser {
+    margin: 5px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    border: solid 1px;
+    float: left;
+    margin-right: 50%;
+}
+.condition {
+    background: black;
+}
+.result{
+    text-align: left;
+    width: 50%;
+    padding: 5px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.task {
+    background: black;
+}
+
+.detail-con, .detail-faq {
+    text-align: left;
+    width: 50%;
+    padding: 5px;
+    font-weight: 500;
+    color: #caff00;
+}
+
+.detail-faq {
+    width: 100%;
+}
+
+.detail {
+    width: 100%;
+    margin: 8px;
+    border-bottom: solid 1px grey;
+}
+
+.title-con {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+    color: #ffffff;
+}
+
+p {
+    font-weight: bold;
+}
+
+h1 {
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title-vn {
+    width: 100%;
+    text-align: center;
+}
+
+html,body {
+    width: 100%;
+}
+
+.content,.result {
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+.result {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.languages {
+    right: 0;
+    margin-top: 10px;
+    z-index: 2;
+    position: absolute;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    background: url(./images/bg-image.jpg);
+    background-size: cover;
+    height: 10%;
+    z-index: 3;
+}
+#anwser-1.pick-anwser.right {
+    background: #00ff0a;
+}
+#anwser-1.pick-anwser.wrong {
+    background: red;
+}
+
+
+.main-container {
+    background-color: lightblue;
+    height: 800px;
+    width: 700px;
+    border: solid;
+    border-color: black;
+    border-radius: 15px;
+  }
+  
+  .navbar-default {
+    height: 80px;
+    background: maroon;
+    text-align: center;
+    color: white;
+  }
+  
+  .questionArea {
+    background-color: white;
+    width: 94%;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    color: green;
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+  .timerArea {
+    text-align: center;
+    background-color: grey;
+    width: 350px;
+    height: 50px;
+    border: 3px;
+    border-style: solid;
+    border-color: orange;
+    position: relative;
+    left: 158px;
+    margin-bottom: 10px;
+  
+  }
+  .startButton:hover {
+    background-color: #9C27B0;
+  }
+  
+  .startButton {
+    text-align: center;
+    line-height: 80px;
+    background-color: #3F51B5;
+    width: 50%;
+    height: 50px;
+    border: 3px;
+    border-style: solid;
+    border-color: #3F51B5;
+    bottom: 5px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  #wins {
+    width: 100px;
+    height: 50px;
+    background-color: #673AB7;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #losses {
+    width: 100px;
+    height: 50px;
+    background-color: #673AB7;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .answerArea {
+    top: 5px;
+    font-size: 14px;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .answerBlock:hover {
+    background-color: #03A9F4;
+    color: white;
+  }
+  
+  .answerBlock {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: solid 3px white;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: auto;
+  font-weight: bold;
+  margin-right: auto;
+  display: none;
+  }
+
+.answerBlock.begin {
+    display: block;
+}
+  .detail.disappear {
+    display: none;
+  }
+  .result.appear {
+    display: block;
+    top: 250px;
+  }
+  input#send-fb,input#send-twitter {
+    margin-top: 20%;
+    color: white;
+    background: #9C27B0;
+    padding: 10px 20px;
+    border: solid 2px #9C27B0;
+    border-radius: 10px;
+}
+  

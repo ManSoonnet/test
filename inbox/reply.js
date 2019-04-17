@@ -1,0 +1,1 @@
+const make = require('../make');

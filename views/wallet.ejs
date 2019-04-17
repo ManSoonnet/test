@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> WALLET </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="./stylesheets/vendor/bootstrap.js"></script>
+ 	
+	<link rel="stylesheet" href="./stylesheets/vendor/bootstrap.css">
+	<link rel="stylesheet" href="./stylesheets/vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body >
+		<script>
+				(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'Messenger'));
+</script> 
+	<div class="top">
+		<div class="languages">
+			<select id="select_lang" onchange="selectLanguage(this)">
+			    <option class="lang" value="vi">Tiếng Việt</option>
+			    <option class="lang" value="en">English</option>
+			    <option class="lang" value="chn">中文</option>
+			</select>
+		</div>
+	</div>
+	<div class="content active" id="vi">
+		<div class="container">
+			<div class="row">
+				<div class="title-vn">
+                    <h1>TENTECH WALLET</h1>
+										<p>Số dư: <%= total %> TEN</p>
+										<p>REF: <%= ref %></p>
+				</div>
+			</div>
+		</div>
+		<div class="task">
+			<div class="container">
+				<div class="row">
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Số  tài khoản: </div>
+                <div class="result_wallet"><%= psid %></div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Họ tên: </div>
+                <div class="result_wallet"> <%= name%> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">REFERRAL: </div>
+                <div class="result_wallet"> <%= refnumber %></div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">MAIL: </div>
+                <div class="result_wallet" style="overflow: hidden;"> <%= email %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ GROUP: </div>
+                <div class="result_wallet"> <%= group %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ APP: </div>
+                <div class="result_wallet"> <%= app %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ LIKE PAGE: </div>
+                <div class="result_wallet"> <%= fanpage %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ TWITTER: </div>
+                <div class="result_wallet"> <%= twitter %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ YOUTUBE: </div>
+                <div class="result_wallet"> <%= youtube %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">Nhiệm vụ FAQ: </div>
+                <div class="result_wallet"> <%= faq %> </div>
+              </div>  							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content" id="en">
+		<div class="container">
+			<div class="row">
+				<div class="title-vn">
+					<h1>TENTECH WALLET</h1>
+					<p>Balance: <%= total %> TEN</p>
+				</div>
+			</div>
+		</div>
+		<div class="task">
+			<div class="container">
+				<div class="row">
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">YOUR ID: </div>
+                <div class="result_wallet"> <%= psid %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">NAME: </div>
+                <div class="result_wallet"> <%= name %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">REFERRAL: </div>
+                <div class="result_wallet"> <%= refnumber %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">MAIL: </div>
+                <div class="result_wallet"> <%= email %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">GROUP CAMPAIGN: </div>
+                <div class="result_wallet"> <%= group %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">APP CAMPAIGN: </div>
+                <div class="result_wallet"> <%= app %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">LIKE PAGE CAMPAIGN: </div>
+                <div class="result_wallet"> <%= fanpage %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">TWITTER CAMPAIGN: </div>
+                <div class="result_wallet"> <%= twitter %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">YOUTUBE CAMPAIGN: </div>
+                <div class="result_wallet"> <%= youtube %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">FAQ CAMPAIGN: </div>
+                <div class="result_wallet"> <%= faq %> </div>
+              </div>  							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="content" id="chn">
+		<div class="container">
+			<div class="row">
+				<div class="title-vn">
+					<h1>TENTECH 钱包</h1>
+					<p>平衡: <%= total %> TEN</p>
+				</div>
+			</div>
+		</div>
+		<div class="task">
+			<div class="container">
+				<div class="row">
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">您的 ID: </div>
+                <div class="result_wallet"> <%= psid %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">名字: </div>
+                <div class="result_wallet"> <%= name %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">REFERRAL: </div>
+                <div class="result_wallet"> <%= refnumber %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">邮件: </div>
+                <div class="result_wallet"> <%= email %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">组活动: </div>
+                <div class="result_wallet"> <%= group %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">APP活动: </div>
+                <div class="result_wallet"> <%= app %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">LIKE活动: </div>
+                <div class="result_wallet"> <%= fanpage %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">TWITTER活动: </div>
+                <div class="result_wallet"> <%= twitter %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">YOUTUBE活动: </div>
+                <div class="result_wallet"> <%= youtube %> </div>
+              </div>  							
+						</div>
+					</div>
+					<div class="detail">
+						<div class="container">
+              <div class='row'>
+                <div class="detail-con">FAQ活动: </div>
+                <div class="result_wallet"> <%= faq %> </div>
+              </div>  							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script language="javascript">
+	var vi = document.getElementById('vi');
+ 	var en = document.getElementById('en');
+ 	var chn = document.getElementById('chn');
+ 	function selectLanguage(obj)
+ 	{
+ 		var value = obj.value;
+ 		if (value === 'vi') {			
+ 			en.classList.remove('active');
+ 			chn.classList.remove('active');
+ 			vi.classList.add('active');
+ 		}
+ 		if (value === 'en') {
+ 			vi.classList.remove('active');
+ 			chn.classList.remove('active');
+ 			en.classList.add('active');	
+ 		}
+ 		if (value === 'chn') {
+ 			vi.classList.remove('active');
+ 			en.classList.remove('active');
+ 			chn.classList.add('active');
+ 		}
+ 	}
+</script>
+</html>
