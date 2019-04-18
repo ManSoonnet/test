@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> FAQ CAMPAIGN </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="./stylesheets/vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="./javascripts/check-faq.js"></script>
+	<link rel="stylesheet" href="./stylesheets/vendor/bootstrap.css">
+	<link rel="stylesheet" href="./stylesheets/vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body >
+	<div class="top">
+		<div class="languages">
+			<select id="select_lang" onchange="selectLanguage(this)">
+			    <option class="lang" value="vi">Tiếng Việt</option>
+			    <option class="lang" value="en">English</option>
+			    <option class="lang" value="chn">中文</option>
+			</select>
+		</div>
+	</div>
+	<div class="content active" id="vi">
+		<div class="container">
+			<div class="row">
+				<div class="title-vn">
+					<h1>CHIẾN DỊCH FAQ</h1>
+					<p>15 TEN/ Câu đúng</p>
+				</div>
+			</div>
+		</div>
+		<div class="condition">
+			<div class="container">
+				<div class="row">
+					<div class="detail">
+						<div class="container">
+							<div id = "questionArea" class="row questionArea">Nhấn "Bắt đầu" để khởi động chiến dịch, với mỗi câu trả lời đúng bạn sẽ nhận được 15 TEN, thời gian cho mỗi câu hỏi là 20s, hãy tìm hiểu kĩ trước khi trả lời.</div><!--questionArea endtag-->
+							<h4 id="timerArea">Đếm ngược</h4>
+							<div class="answerArea">
+								<button id="startButton" class="startButton"><h4>Bắt đầu</h4></button>
+								<div class="container">
+									<div class="row">
+										<div id="wins" class="col-sm-4 col-sm-offset-1"></div>
+										<div id="losses" class="col-sm-4"></div>
+									</div>
+								</div>
+								<button id="1_1" class="row answerBlock" ><p></p></button>
+								<button id="1_2" class="row answerBlock" ><p></p></button>
+								<button id="1_3" class="row answerBlock" ><p></p></button>
+						</div><!--"answerArea endtag"-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="result">
+			<div class="container">
+				<div class="detail-total">SỐ CÂU TRẢ LỜI ĐÚNG CỦA BẠN:
+					<form action="/aq" method="get">
+						<input id="send_result" type="submit" value="" name="<%=id %>">
+					</form> 
+					<p class="nof">click vào Nút để gửi kết quả và nhận token TEN</P>
+				</div>
+			</div>
+	</div>
+</body>
+<script languages="javascript">
+		var vi = document.getElementById('vi');
+		var en = document.getElementById('en');
+    var chn = document.getElementById('chn');
+    function selectLanguage(obj)
+    {
+        var value = obj.value;
+        if (value === 'vi') {			
+            en.classList.remove('active');
+            chn.classList.remove('active');
+            vi.classList.add('active');
+        }
+        if (value === 'en') {
+            vi.classList.remove('active');
+            chn.classList.remove('active');
+            en.classList.add('active');	
+        }
+        if (value === 'chn') {
+            vi.classList.remove('active');
+            en.classList.remove('active');
+            chn.classList.add('active');
+        }
+	}
+</script>
+</html>
+
