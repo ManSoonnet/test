@@ -28,4 +28,3 @@ transporter.sendMail(mailOptions, function(error, info){
   }
 });
 }}
-//send('henryskyway@gmail.com','dcm anh');

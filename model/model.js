@@ -80,4 +80,4 @@ getbuy: (fill,call)=>{
  }
 }
 
-//fill, up la obj | Vi du: {psid: '12345678'},{name: 'cai lol me'}
+//fill, up la obj | Vi du: {psid: '12345678'},{name: 'cc'}
